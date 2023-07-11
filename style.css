@@ -1,0 +1,96 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+.container{
+    height: 100vh;
+    display: flex;
+    width: 100%;
+}
+.img-container{
+    width: 40%;
+    height: 100%;
+    position: relative;
+}
+.img-container img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.form-container{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 30px;
+}
+.form-container p{
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding-bottom: 25px;
+}
+.form-container h3{
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding-bottom: 50px;
+}
+.form-container .lets-do-this{
+    padding-bottom: 15px;
+}
+.form-content{
+    padding-bottom: 10px;
+    box-shadow: 0 4px 5px -2px #b9b9b9;
+}
+.row1{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+.form-input{
+    max-width: 240px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 30px;
+}
+input{
+    padding: 7px;
+    border-radius: 5px;
+    border: 1px solid #6d6d6d;
+    outline: none;
+}
+
+input:focus{
+    border: 1px solid rgb(0, 68, 255);
+}
+input[type="submit"]{
+    margin-top: 30px;
+    border: none;
+    background-color: #ff5454;
+    padding: 15px 20px;
+    color: white;
+    cursor: pointer;
+    font-size: 1rem;
+}
+input[type="submit"]:focus{
+    transform: scale(1.08);
+    transition: 0.3s;
+}
+label{
+    text-transform: uppercase;
+    font-size: .9rem;
+    letter-spacing: .1rem;
+}
+p.have-account{
+    padding-top: 20px;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.have-account a{
+    text-decoration: none;
+    color: #ff5454;
+    font-weight: 500;
+}
