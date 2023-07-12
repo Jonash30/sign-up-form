@@ -4,6 +4,15 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
+@font-face {
+    font-family: Norse;
+    src: url(assets/fonts/Norsebold.otf);
+}
+
+:root{
+    --primary-color: #ff5454;
+    --focus-border: rgb(0, 68, 255);
+}
 .container{
     height: 100vh;
     display: flex;
@@ -19,6 +28,23 @@
     height: 100%;
     object-fit: cover;
 }
+.logo{
+    top: 20%;
+    position: absolute;
+    background: rgba(0,0,0,.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.logo span{
+    font-size: 4rem;
+    color: white;
+    font-family: Norse;
+}
+.logo img{
+    width: 80px;
+}
 .form-container{
     width: 60%;
     display: flex;
@@ -30,11 +56,13 @@
     font-size: 1.2rem;
     font-weight: 500;
     padding-bottom: 25px;
+    transition: 0.3s;
 }
 .form-container h3{
     font-size: 1.2rem;
     font-weight: 500;
     padding-bottom: 50px;
+    transition: 0.3s;
 }
 .form-container .lets-do-this{
     padding-bottom: 15px;
@@ -45,11 +73,10 @@
 }
 .row1{
     display: flex;
-    flex-wrap: wrap;
     gap: 30px;
+    transition: 0.3s;
 }
 .form-input{
-    max-width: 240px;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -61,22 +88,24 @@ input{
     border: 1px solid #6d6d6d;
     outline: none;
 }
-
 input:focus{
-    border: 1px solid rgb(0, 68, 255);
+    border: 1px solid var(--focus-border);
+}
+input[type="email"]:invalid{
+    border: 1px solid red;
 }
 input[type="submit"]{
     margin-top: 30px;
     border: none;
-    background-color: #ff5454;
+    background-color: var(--primary-color);
     padding: 15px 20px;
     color: white;
     cursor: pointer;
     font-size: 1rem;
+    transition: 0.3s;
 }
 input[type="submit"]:focus{
     transform: scale(1.08);
-    transition: 0.3s;
 }
 label{
     text-transform: uppercase;
@@ -87,10 +116,56 @@ p.have-account{
     padding-top: 20px;
     font-size: 1rem;
     font-weight: 400;
+    transition: 0.3s;
 }
 
 .have-account a{
     text-decoration: none;
-    color: #ff5454;
+    color: var(--primary-color);
     font-weight: 500;
+}
+
+@media (max-width: 700px){
+    .img-container{
+        display: none;
+    }
+    .form-container{
+        width: 100%;
+    }
+    .form-container p{
+        font-size: 1rem;
+    }
+    .form-container h3{
+        font-size: 1rem;
+        padding-bottom: 30px;
+        
+    }
+    .row1{
+        flex-wrap: wrap;
+        gap: 0;
+    }
+    .form-input{
+        padding-bottom: 8px;
+    }
+    label{
+        font-size: .8rem;
+    }
+    .submit-btn{
+        width: 100%;
+        margin-top: 30px;
+        text-align: center;
+    }
+    input[type="submit"]{
+        margin: 0;
+        border: none;
+        background-color: #ff5454;
+        padding: 15px 20px;
+        color: white;
+        cursor: pointer;
+        font-size: .8rem;
+    }
+    p.have-account{
+        text-align: center;
+        font-size: .9rem;
+    }
 }
