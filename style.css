@@ -86,15 +86,17 @@
 input{
     padding: 7px;
     border-radius: 5px;
-    border: 1px solid #6d6d6d;
+    border: 1px solid #9c9c9c;
     outline: none;
 }
 input:focus{
     border: 1px solid var(--focus-border);
 }
-input[type="email"]:invalid,
-input[type="tel"]:invalid{
+input:invalid{
     border: 1px solid red;
+}
+input::placeholder{
+    color: #a1a1a1;
 }
 input[type="submit"]{
     margin-top: 30px;
@@ -126,10 +128,10 @@ p.have-account{
     color: var(--primary-color);
     font-weight: 500;
 }
-.error{
-    font-size: .9rem;
+.email-error, .phone-error, .password-error1, .password-error2, .confirm-pass-error{
+    font-size: .8rem;
     color: red;
-    
+    padding: .5rem 0 0 .5rem;
 }
 @media (max-width: 700px){
     .img-container{
