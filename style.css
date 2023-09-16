@@ -128,7 +128,7 @@ p.have-account{
     color: var(--primary-color);
     font-weight: 500;
 }
-.email-error, .phone-error, .password-error1, .password-error2, .confirm-pass-error{
+.fname-error, .lname-error, .email-error, .phone-error, .password-error1, .password-error2, .confirm-pass-error{
     font-size: .8rem;
     color: red;
     padding: .5rem 0 0 .5rem;
